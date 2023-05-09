@@ -16,3 +16,21 @@ dependencyResolutionManagement {
 rootProject.name = "Karma"
 include(":androidApp")
 include(":shared")
+include(":common:core")
+include(":common:core-compose")
+include(":common:core-utils")
+include(":common:umbrella-compose")
+include(":common:umbrella-core")
+include(":common:umbrella-ios")
+
+include(":common:auth:api")
+include(":common:auth:presentation")
+include(":common:auth:data")
+include(":common:auth:compose")
+
+//include(":common:profile:api")
+//include(":common:profile:presentation")
+//include(":common:profile:data")
+//include(":common:profile:compose")
+
+
