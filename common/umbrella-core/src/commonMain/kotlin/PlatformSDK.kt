@@ -19,9 +19,9 @@ object PlatformSDK {
             DI {
                 importAll(
                     umbrellaModule,
-                    coreModule
-//                    profileModule,
-//                    authModule
+                    coreModule,
+                    profileModule,
+                    authModule
                 )
             }.direct
         )
