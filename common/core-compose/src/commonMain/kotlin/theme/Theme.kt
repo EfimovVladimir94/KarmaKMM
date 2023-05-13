@@ -7,6 +7,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 fun AppTheme(content: @Composable () -> Unit) {
     CompositionLocalProvider(
         LocalColorProvider provides  palette,
+        LocalFontProvider provides fonts,
         content = content
     )
 }
@@ -15,4 +16,8 @@ object Theme {
     val colors: KarmaColors
         @Composable
         get() = LocalColorProvider.current
+
+    val fonts: KarmaFonts
+        @Composable
+        get() = LocalFontProvider.current
 }

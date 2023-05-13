@@ -3,6 +3,7 @@ package navigation
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.graphics.Color
 import com.adeo.kviewmodel.odyssey.setupWithViewModels
 import ru.alexgladkov.odyssey.compose.base.Navigator
 import ru.alexgladkov.odyssey.compose.extensions.setupWithActivity
@@ -10,7 +11,6 @@ import ru.alexgladkov.odyssey.compose.local.LocalRootController
 import ru.alexgladkov.odyssey.compose.navigation.RootComposeBuilder
 import ru.alexgladkov.odyssey.compose.navigation.modal_navigation.ModalNavigator
 import theme.AppTheme
-import theme.Theme
 
 fun ComponentActivity.setupThemedNavigation() {
     val rootController = RootComposeBuilder()
@@ -21,8 +21,7 @@ fun ComponentActivity.setupThemedNavigation() {
 
     setContent {
         AppTheme {
-            val backgroundColor = Theme.colors.primaryBackground
-            rootController.backgroundColor = backgroundColor
+            rootController.backgroundColor = Color.White
             
             CompositionLocalProvider(LocalRootController provides rootController) {
                 ModalNavigator {
