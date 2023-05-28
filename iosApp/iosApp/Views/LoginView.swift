@@ -19,110 +19,77 @@ struct LoginView: View {
 
     var body: some View {
         ZStack {
-            ZStack {
-                Image("background")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-
-            }
-            .ignoresSafeArea()
+            Color.white.ignoresSafeArea()
             VStack(spacing: 0) {
-                VStack {
-                    Text("Авторизация")
-                        .foregroundColor(.white)
-                        .font(Font.title2)
-                        .padding(.top, 12)
-                    Image("logoAuth")
-                        .resizable()
-                        .frame(width: 190, height: 42)
-                        .padding(.top, 56)
-
-                    credentialFields
-                        .padding(.top, 46)
-
-                    Button {
-                        eventHandler(.ForgotClick())
-                    } label: {
-                        Text("Забыли пароль?")
-                            .foregroundColor(.gray)
-                    }
-                    .padding(.top, 15)
+                Image("LaunchLogo")
+                    .frame(width: 227, height: 157, alignment: .center)
+                    .padding(.top, 70)
+                loginPassView
+                    .padding(.top, 21)
+                HStack {
+                    Text("Забыли пароль?")
+                        .foregroundColor(.black)
+                        .font(.medium(15))
+                    Text("Нажмите сюда")
+                        .foregroundColor(.blue)
+                        .font(.bold(15))
                 }
-
-                VStack(spacing: 0) {
-                    Button {
-                        eventHandler(.LoginClick())
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 20)
-                                .foregroundColor(.orange)
-                            Text("ВОЙТИ")
-                                .foregroundColor(.white)
-                        }
-                    }
-                    .frame(height: 40)
-                    .padding(.top, 28)
-                }
-                .padding(.horizontal, 60)
-
-                HStack(spacing: 13) {
-                    Rectangle()
-                        .frame(maxWidth: 30, maxHeight: 1)
-                        .foregroundColor(Color.gray)
-                    Text("или с помощью соц. сетей")
-                        .font(.title3)
-                        .foregroundColor(.gray)
-                        .lineLimit(1)
-                    Rectangle()
-                        .frame(maxWidth: 30, maxHeight: 1)
-                        .foregroundColor(Color.gray)
-                }
-                .padding(.top, 24)
-                .padding(.horizontal, 34)
-
-                HStack(spacing: 37) {
-                    Image("facebookLogo")
-                        .resizable()
-                        .frame(width: 46, height: 46)
-                    Image("google")
-                        .resizable()
-                        .frame(width: 46, height: 46)
-                    Image("vk")
-                        .resizable()
-                        .frame(width: 46, height: 46)
-
-                }
-                .padding(.top, 22)
-                .padding(.horizontal, 81)
-
+                .padding(.top, 14)
+                .padding(.horizontal, 10)
                 Button {
-                    eventHandler(.RegistrationClick())
+                    eventHandler(.ForgotClick())
                 } label: {
-                    Text("Регистрация")
-                        .foregroundColor(.gray)
+                    ZStack {
+                        Color.blue
+                        Text("Вход")
+                            .font(.bold(18))
+                            .foregroundColor(Color.white)
+                    }
                 }
-                .padding(.top, 20)
+                .cornerRadius(10)
+                .frame(height: 53, alignment: .center)
+                .padding(.top, 25)
                 Spacer()
+                VStack(spacing: 0) {
+                    Text("Авторизироваться через соц. сети")
+                        .foregroundColor(.black)
+                        .font(.medium(15))
+                        .frame(alignment: .center)
+                    HStack(spacing: 15) {
+                        Image("Instagram")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("Telegram")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                        Image("Google")
+                            .frame(width: 42, height: 42, alignment: .center)
+                            .background(Circle.init().foregroundColor(.blue))
+                            .onTapGesture {
+                            }
+                    }
+                    .padding(.top, 14)
+                    HStack {
+                        Text("Нет аккаунта?")
+                            .foregroundColor(.black)
+                            .font(.medium(15))
+                        Text("Зарегистрироваться")
+                            .foregroundColor(.blue)
+                            .font(.bold(15))
+                            .onTapGesture {
+                                eventHandler(.RegistrationClick())
+                            }
+                    }
+                    .padding(.top, 14)
+                    .padding(.horizontal, 10)
+                }
             }
-        }
-    }
-
-    var credentialFields: some View {
-        VStack(spacing: 36) {
-            CstTextField(
-                text: $email,
-                placeholder: "Введите email"
-            )
-            .onChange(of: email, perform: {
-                eventHandler(.EmailChanged(value: $0))
-            })
-            CstTextField(
-                text: $password,
-                placeholder: "Введите пароль"
-            )
-            .onChange(of: password, perform: {
-                eventHandler(.PasswordChanged(value: $0))
-            })
+            .ignoresSafeArea(.keyboard)
+            .padding(.horizontal, 40)
         }
     }
 }

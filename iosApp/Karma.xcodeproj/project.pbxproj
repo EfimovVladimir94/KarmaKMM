@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		BC12B541D06651AC84DB61C3 /* Pods_Karma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F416BA260AEFD232569DE756 /* Pods_Karma.framework */; };
+		E74DBD9C2A1BE7C80096274A /* LoginView+LoginPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74DBD9B2A1BE7C80096274A /* LoginView+LoginPassView.swift */; };
 		E779362D2A1110250020D489 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77936192A1110250020D489 /* Constants.swift */; };
 		E779362E2A1110250020D489 /* View+placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779361B2A1110250020D489 /* View+placeholder.swift */; };
 		E77936302A1110250020D489 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E779361D2A1110250020D489 /* Font.swift */; };
@@ -40,6 +41,7 @@
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBBCB5E9F5C69B77A49B062 /* Pods-Karma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Karma.debug.xcconfig"; path = "Target Support Files/Pods-Karma/Pods-Karma.debug.xcconfig"; sourceTree = "<group>"; };
+		E74DBD9B2A1BE7C80096274A /* LoginView+LoginPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginView+LoginPassView.swift"; sourceTree = "<group>"; };
 		E77936192A1110250020D489 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E779361B2A1110250020D489 /* View+placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+placeholder.swift"; sourceTree = "<group>"; };
 		E779361D2A1110250020D489 /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				E779363E2A11177F0020D489 /* LoginScreen.swift */,
 				E77936402A11179F0020D489 /* LoginView.swift */,
+				E74DBD9B2A1BE7C80096274A /* LoginView+LoginPassView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				E77936382A1110250020D489 /* ImagePicker.swift in Sources */,
 				E77936372A1110250020D489 /* CstTextField.swift in Sources */,
+				E74DBD9C2A1BE7C80096274A /* LoginView+LoginPassView.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
 				E779363B2A1116540020D489 /* Flow+Publisher.swift in Sources */,
 				E77936322A1110250020D489 /* Color.swift in Sources */,
